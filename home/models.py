@@ -48,7 +48,7 @@ class HomePage(Page):
     
     templates = 'home/home_page.html'
     subpage_types = ['blog.BlogArticlesList',
-                     'services.ServicePage', 'contact.ContactPage', 'subscriptions.SubscriptionPage','careers.CareerListPage']
+                     'services.ServicePage', 'contact.ContactPage', 'subscriptions.SubscriptionPage', 'careers.CareerListPage', 'policies.PolicyPage']
     
 
     banner_intro_small = models.CharField(max_length=50, blank=False, null=True)

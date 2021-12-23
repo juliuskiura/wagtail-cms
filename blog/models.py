@@ -37,32 +37,11 @@ class BlogArticlesList(Page):
         context = super().get_context(request, *args, **kwargs)
         all_posts = ArticleDetails.objects.live().public().order_by('-first_published_at')   
         parents = [post.get_parent().id for post in  all_posts]
-        # all_parent = BlogParents.objects.all()
-        # parents_used_in_posts = [post.get_parent() for post in  all_posts]
-
-        # getting unique categories
-        # unique_parents = tupple(parents_used_in_posts)
         
-        # method 2
-        # parents_ids_in_posts = [post.get_parent().id for post in  all_posts]
-        # categories_in_posts = all_categories.filter(id__in=parents_ids_in_posts)
-
-
-
-
-
-
-
-        # 
-
         all_categories = ArticleCategory.objects.all()
 
         live_cats = all_categories.filter(id__in=parents)
-            
-        # category_ids = all_posts.values_list('article_category', flat=True)
         
-        # categories = ArticleCategory.objects.filter(id__in = category_ids )
-        # context['categories'] = categories
         context = {
             'posts': pager(request, all_posts, per_page=per_page), #pager is a custom function from within the folder 'post_pager.py
             'categories': live_cats,

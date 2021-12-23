@@ -2,10 +2,7 @@ from wagtail.core import blocks
 
 
 class HeadingAndParagraphBlocks(blocks.StructBlock):
-    '''
-    <p class="number"><span>0</span>1</p>
-    	Units (Once)
-    '''
+   
     span_units_once = blocks.CharBlock(required=True, help_text='Add a header text')
     span_unit_number = blocks.CharBlock(
         required=True, help_text='Add a header text')
@@ -16,3 +13,10 @@ class HeadingAndParagraphBlocks(blocks.StructBlock):
         template = 'streams/heading_and_paragraph.html'
         icon = 'edit'
         label = 'Heading & Body'
+
+
+class ParagraphBlocks(blocks.RichTextBlock):
+    class Meta:
+        template = 'streams/rich_para_block.html'
+        icon = 'edit'
+        label = 'Body Content'
