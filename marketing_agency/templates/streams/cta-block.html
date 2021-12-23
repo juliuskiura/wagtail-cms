@@ -1,0 +1,6 @@
+{% load wagtailcore_tags %}
+{% if self.button_page %}
+<a href="{{ self.button_page.url }}" class="cta">{{ self.button_text }}</a> 
+{%else %}
+<a href="{{ self.external_url.url }}" class="cta">{{ self.button_text }}</a>
+{% endif %}

@@ -1,0 +1,268 @@
+{% extends 'base.html' %}		
+{% load static %}
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+{% load wagtailembeds_tags %}
+{% load wagtailcustom_tags %}
+{% block content %}
+		<main class="main">
+	
+			<div class="gradientSpecialMain">
+			
+			<section class="welcome" id="agencja" title="">
+				<div class="wrapper">
+					<div class="welcome-text animated watched moved">
+						<p class="hs animated watched moved">{{ self.banner_intro_small }}</p>
+						<h1 class="h1 h1big animated watched moved">{{ self.banner_header }}</h1>
+						<p class="animated watched moved"><strong>Digital marketing ma dla nas niewiele tajemnic.</strong> Sięgamy po rozwiązania, które w połączeniu z wnikliwą i precyzyjną analizą danych, stanowią naszą przewagę. Zaprzęgamy najnowsze technologie w służbie efektywnych działań reklamowych i zwiększonych zysków naszych Klientów. <span class="toggle" rel="wstep_rozwiniecie"><i class="icon-down-open"></i></span></p>
+					</div>
+					<div class="welcome-text-more animated watched moved">
+						<div id="wstep_rozwiniecie" class="slidered dead">
+							<p class="animated watched moved">Kluczem naszego sukcesu jest przetwarzanie i analiza danych tak, by opowiadały historię potrzebną do optymalizacji prowadzonych kampanii reklamowych. Łączymy dane pochodzące ze strony internetowej, aplikacji mobilnej, systemów reklamowych i CRM. Wykorzystujemy dostępne na rynku algorytmy i tworzymy własne.</p>
+							
+							<p class="animated watched moved">W rozpędzonym świecie, generującym coraz większe ilości danych, podstawowe narzędzia takie jak Google Analytics to za mało. W naszej pracy wykorzystujemy takie rozwiązania jak Big Query, Snowflake, Apache Airflow, Adform oraz machine learning. Świat się zmienia, Twoja konkurencja idzie do przodu, ale z nami jesteś zawsze step ahead.</p>
+
+							<p class="animated watched moved">Ale po kolei – punktem wyjścia do naszej współpracy jest ustalenie Twoich potrzeb i celów.</p>
+
+							<p class="animated watched moved">Jeśli działasz w e-commerce, ustalamy LTV-Based ROAS. W przypadku firm B2B i B2C zaczynamy od wyznaczenia LTV-CPL. Dzięki temu dokładnie znasz kierunek, w jakim zmierzamy, a jego osiągnięcie możesz zweryfikować.</p>
+
+							<p class="animated watched moved">W drodze po wyznaczone KPI korzystamy z możliwości, jakie stwarza data engineering, rozwiązania chmurowe i narzędzia klasy BI. Śledzimy ścieżki Twoich użytkowników, tworzymy analizy i wyciągamy wnioski. Efekty? Ty wiesz więcej o swojej firmie, a my dostajemy paliwo do optymalizacji PPC czy marketing automation.</p>
+						</div>
+					</div>
+					<div class="welcome-image animated watched moved">
+						<div class="welcome-image-container"></div>
+					</div>
+					<div class="welcome-cta animated watched moved">						
+							<p>
+								<a href="" class="cta">Zadzwoń</a>
+								<a href="" class="cta ctag">Napisz do nas</a>
+							</p>
+							
+					
+					</div>
+					<div class="welcome-logotypes animated">
+						<p class="logotypes">
+							<span class="logo"><img class="lazyLoad" data-src="{% static 'core/images/logo-forbes.png' %}" alt=""></span>
+							<span class="logo"><img class="lazyLoad" data-src="{% static 'core/images/logo-bi.png' %}" alt=""></span>
+							<span class="logo"><img class="lazyLoad" data-src="{% static 'core/images/logo-forbes.png' %}" alt=""></span>
+							<span class="logo"><img class="lazyLoad" data-src="{% static 'core/images/logo-bi.png' %}" alt=""></span>
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="offer" id="oferta" title="">
+				<div class="wrapper">
+					<div class="offer-long">
+						<p class="hs">Szeroki zakres usług</p>
+						<h2 class="h1">Czym się zajmujemy</h2>
+						<p>Techmarketers to firma zbudowana na solidnych fundamentach. Wyrośliśmy w środowisku domów mediowych, agencji digitalowych i technologii. Ciągłą naukę, pogoń za wiedzą i zdobyte doświadczenie przekuliśmy we własną organizację, <strong>bo wierzymy, że można działać jeszcze sprawniej, skuteczniej, wydajniej</strong>. W skomplikowanym świecie analityki internetowej, danych i algorytmów wciąż najważniejszy jest czynnik ludzki. W techmarketers jest nim zgrany team ekspertów, którzy łączą swoje superpowers: unikalną wiedzę, głód rozwoju i zaangażowanie.</p>
+						<p>Każdą powierzoną przez Was złotówkę zabieramy w podróż, z której wróci w postaci zysku. Wierzymy, że efektywne działania przekładające się na wymierne korzyści klientów mają swoje źródło w dobrze poukładanym środowisku. Jesteśmy mocni od wewnątrz. Wypracowaliśmy własną kulturę organizacji – od sposobu rekrutacji, przez model wynagrodzenia i organizację pracy, po rozwój kompetencji. Wszystko po to by generować dla Wam jak najlepsze rezultaty.</p>
+						<p><a class="toggle" rel="oferta_rozwiniecie">Zobacz więcej <i class="icon-down-open"></i></a></p>
+					</div>
+					
+					<div class="offer-long-more">
+						<div id="oferta_rozwiniecie" class="slidered dead">
+						
+							<div class="item">
+								<h3 class="h2g">Czym się zajmujemy</h3>
+								<p class="animated">Mauris nec mi non eros tristique cursus. Cras finibus tortor in varius finibus. Curabitur erat metus, aliquet porttitor suscipit eu, interdum ut leo. Proin elementum vulputate sem at aliquet. Proin ultricies justo eu erat tempor, at finibus justo egestas. Proin id molestie eros. Morbi ut diam augue. Praesent odio fermentum rhoncus. Proin ornare ornare purus quis euismod. Donec mauris enim, tempor sit amet convallis non, venenatis non orci.</p>
+							</div>
+							
+							<div class="item">
+								<h3 class="h2g">Czym się zajmujemy</h3>
+								<p class="animated">Maecenas in velit fringilla, facilisis quam eget, faucibus est. Nunc rutrum scelerisque ullamcorper. Mauris elementum tempor nunc, vel auctor orci feugiat sed. Aliquam tempor et augue in sollicitudin. Nullam mollis ligula ut malesuada scelerisque. Curabitur gravida erat eu consequat vehicula. Praesent vehicula nec quam ac egestas. Duis aliquet vehicula felis, et faucibus lacus convallis sed. Duis porta tincidunt mauris, a lacinia dolor.</p>
+							</div>
+							
+							<div class="item">
+								<h3 class="h2g">Czym się zajmujemy</h3>
+								<p class="animated">Quisque in metus in nisl venenatis mollis. Nullam at luctus enim. Vivamus tortor auctor dignissim. Quisque eget pharetra velit, ac lacinia ipsum. Fusce mollis sem ut dolor venenatis, eget sollicitudin enim maximus. Nunc eget erat lacinia, ullamcorper libero eu, auctor mi. Donec cursus mauris elit, quis malesuada massa pellentesque at. Suspendisse id bibendum lorem.</p> 
+							</div>
+							
+							<div class="item">
+								<h3 class="h2g">Czym się zajmujemy</h3>
+								<p class="animated">Fusce facilisis et augue eget aliquet. Aenean et auctor enim, ac venenatis ipsum. Etiam imperdiet nulla id lacus ullamcorper tempus. Praesent vitae mauris eget enim porttitor maximus hendrerit at quam. Sed pellentesque dui ultricies consectetur luctus. Mauris mattis rhoncus diam, vitae tempor lectus convallis laoreet.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="offer-panels">
+						<div class="offer-panel">
+							<p class="offer-panel-icon"><i class="icon-search"></i></p>
+							<p class="hs">PPC (Pay Per Click)</p>
+							<p class="p14">Forma rozliczania reklamy internetowej, w której reklamodawca płaci za kliknięcie w reklamę, a nie za samo jej wyświetlenie. </p>
+						</div>
+						<div class="offer-panel">
+							<p class="offer-panel-icon"><i class="icon-signal"></i></p>
+							<p class="hs">PPC (Pay Per Click)</p>
+							<p class="p14">Forma rozliczania reklamy internetowej, w której reklamodawca płaci za kliknięcie w reklamę, a nie za samo jej wyświetlenie. </p>
+						</div>
+						<div class="offer-panel">
+							<p class="offer-panel-icon"><i class="icon-mail lf-m"></i></p>
+							<p class="hs">PPC (Pay Per Click)</h>
+							<p class="p14">Forma rozliczania reklamy internetowej, w której reklamodawca płaci za kliknięcie w reklamę, a nie za samo jej wyświetlenie. </p>
+						</div>
+						<div class="offer-panel ">
+							<p class="offer-panel-icon"><i class="icon-cloud lf-m"></i></p>
+							<p class="hs">PPC (Pay Per Click)</p>
+							<p class="p14">Forma rozliczania reklamy internetowej, w której reklamodawca płaci za kliknięcie w reklamę, a nie za samo jej wyświetlenie. </p>
+						</div>
+						<div class="offer-panel ">
+							<p class="offer-panel-icon"><i class="icon-database"></i></p>
+							<p class="hs">PPC (Pay Per Click)</p>
+							<p class="p14">Forma rozliczania reklamy internetowej, w której reklamodawca płaci za kliknięcie w reklamę, a nie za samo jej wyświetlenie. </p>
+						</div>
+						<div class="offer-panel ">
+							<p class="offer-panel-icon"><i class="icon-terminal lf-m"></i></p>
+							<p class="hs">PPC (Pay Per Click)</p>
+							<p class="p14">Forma rozliczania reklamy internetowej, w której reklamodawca płaci za kliknięcie w reklamę, a nie za samo jej wyświetlenie. </p>
+						</div>
+					</div>
+				</div>
+
+			</section>
+			
+			</div>
+
+			<section class="happyCustomer" id="zadowolony-klient" title="">
+				<div class="happyCustomer-bgr" style="background: #fff; position: absolute; left: 0px; right: 0px; overflow: hidden;">
+					<img src="{% static 'core/images/bgr-blue-to-white.svg' %}" style="width: 100%; min-height: 100px; margin-top: -2px; border-bottom: 70px solid #fff;" alt="">
+				</div>
+				<div class="wrapper tpl-centered ">
+					<p class="hs">Szeroki zakres usług</p>
+					<h2 class="h1">Wideo zadowolonego klienta</h2>
+					<div class="happyCustomer-video ">
+						
+						<div class="video-content">
+						
+				{{ self.video_link }}
+						
+						</div>
+					</div>
+				</div>
+				<div class="whitePlacer3"></div>
+			</section>
+
+			<section class="articles bgr-white tpl-white" id="artykuly" title="">
+				<div class="wrapper">
+					<div class="articles-container">
+						<div class="articles-item">
+							<div class="articles-image ">
+								{% image self.first_article_link.article_image scale-100 as post_img %}
+						
+								<img class="lazyLoad" data-src="{{ post_img.url }}" alt="">
+							</div>
+							<div class="articles-text ">
+								<p class="hs">{{ self.first_article_link.get_parent }}</p>
+								<h3 class="h1"> {{ self.first_article_link}}</h3>
+								<p>{{ self.first_article_link.article_content|clean_block|safe|truncatechars:204 }}</p>
+										<p class="nomargin"> <a href="{{ self.first_article_link.url }}">Zobacz więcej <i
+													class="icon-right-open"></i></a></p>
+							</div>
+						</div>
+						<div class="articles-item">
+							<div class="articles-image ">
+								{% image self.second_article_link.article_image scale-100 as post_img %}
+						
+								<img class="lazyLoad" data-src="{{ post_img.url }}" alt="">
+							</div>
+							<div class="articles-text ">
+								<p class="hs">{{ self.second_article_link.get_parent }}</p>
+								<h3 class="h1"> {{ self.second_article_link}}</h3>
+								<p>{{ self.second_article_link.article_content|clean_block|safe|truncatechars:204 }}</p>
+										<p class="nomargin mb-change"> <a href="{{ self.second_article_link.url }}">Zobacz więcej <i
+													class="icon-right-open"></i></a></p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			
+			
+			<section class="weTools" id="narzedzia" title="">
+			
+				<div class="marginOStyle2" style="background: #fff; margin-top: -200px;">
+					<img src="{% static 'core/images/bgr-white-to-blue.svg' %}" style="width: 100%; min-height: 100px; border-top: 80px solid #fff;" alt="">
+				</div>
+			
+				<div class="wrapper  runtime clearfix" id="sliderFunc">
+				
+					<h2 class="h1">Narzędzie z którego korzystamy</h2>
+				
+					<div id="intro" class="slider glide">
+					
+					  <ul class="weTools__menu slider__bullets glide__bullets" data-glide-el="controls[nav]">	
+						{% for loop_cycle in self.carousel.all %}
+						<li class="slider__bullet glide__bullet" data-glide-dir="={{ forloop.counter0 }}"><span>{{loop_cycle.carousel_title}}</span></li>
+					
+						{% endfor %}
+					  </ul>
+					
+						<div class="weTools__sliderWrapper clearfix slider__track glide__track" data-glide-el="track">
+						
+							<div class="weTools__sliderWrapperInsider clearfix slider__slides glide__slides">
+								{% for loop_cycle in self.carousel.all %}
+						
+								<div class="slider__frame glide__slide clearfix">
+									<div class="slide">
+										<div class="textContent">
+											<h4 class="h1s">{{loop_cycle.carousel_title}}</h4>
+											{{loop_cycle.carousel_content}}
+										</div>
+										<div class="image">
+											{% image loop_cycle.carousel_image scale-100 as img %}
+											<img data-src="{{ img.url }}" alt="{{ img.alt }}" class="lazyLoad">
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+							
+								
+							
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="marginOStyle" style="background: #fff; overflow: hidden; margin-bottom: -200px; ">
+					<img src="{% static 'core/images/bgr-blue-to-white.svg' %}" style="width: 100%; min-height: 100px; margin-top: -2px; border-bottom: 80px solid #fff;" alt="">
+				</div>
+			
+			</section>
+
+			<section class="ourClients bgr-white tpl-white" id="nasi-klienci" title="">
+				<div class="wrapper tpl-centered">
+					<h2 class="h1">Z <span>naszych usług</span> skorzystali</h2>
+					<p>Jesteśmy grupą specjalistów, którzy zdobyli doświadczenie <strong>przy współpracy z globalnymi brandami</strong>. Realizacja złożonych projektów analitycznych i mediowych jest naszą siłą, którą konsekwentnie rozwijamy.</p>
+					<br>
+					<div class="ourClients-logotypes ">
+						<img class="lazyLoad" data-src="{% static 'core/images/logo-b-1.jpg' %}" alt="">
+						<img class="lazyLoad" data-src="{% static 'core/images/logo-b-2.jpg' %}" alt="">
+						<img class="lazyLoad" data-src="{% static 'core/images/logo-b-1.jpg' %}" alt="">
+						<img class="lazyLoad" data-src="{% static 'core/images/logo-b-2.jpg' %}" alt="">
+					</div>
+				</div>
+			</section>
+	
+			<section class="contactForm " id="kontakt" title="">
+				<div class="wrapper tpl-centered">
+					<br><br>
+					<h3 class="h1">{{self.contact_section_heading}}</h3>
+					<p>{{self.contact_section_para}}</p>
+					<br><br>
+					<div class="form-content">
+						<p class="feedback"></p>
+						<div class="form-part">
+							{% include 'contact/ajaxed_form_page.html' %}
+						</div>
+					
+					</div>
+				</div>
+			</section>
+
+		</main>
+		
+{% endblock content %}
+		

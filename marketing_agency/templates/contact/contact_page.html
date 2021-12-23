@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load wagtailcore_tags %}
+{% block content %}
+
+		<main class="main">
+		
+			
+		
+		
+	
+			<section class="contactForm watched moved" id="kontakt" title="">
+				<div class="wrapper tpl-centered">
+					<br><br>
+					<h2 class="hs animated watched moved">{{self.banner_intro_small}}</h2>				
+					<h1 class="h1">{{self.banner_header}}</h1>
+					<br><br>
+					
+					
+					<div class="c2x" id="contact-main">
+					
+						<div class="additional">
+							<div class="ghostBlock"></div>
+						</div>	
+											
+						<div class="form-content">
+							<h2 class="feedback"></h2>
+							<div class="form-part">
+								{% include 'contact/ajaxed_form_page.html' %}
+							</div>
+							
+						</div>
+					
+					</div>
+				
+				</div>
+			</section>
+
+		</main>
+		{% endblock content %}

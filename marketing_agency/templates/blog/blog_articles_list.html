@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+{% load wagtailcustom_tags %}
+{% block content %}
+		<main class="main">
+		
+			<section class="blog wrapper blog-wrapper">
+		
+				<div class="watched moved clearfix">
+					<ul class="blog__categories">
+						<li class="righter"><a href="{{category.slug}}"><i class="icon-search"></i></a></li>
+						{% if current_category %}	
+
+						<li><a href="/articles">All Articles</a></li>
+						<li><a href="{{current_category.slug}}" class="active">{{current_category}}</a></li>
+					
+						{% else %}					
+						{% for category in categories %}						
+						<li><a href="{{category.slug}}">{{category.title}}</a></li>
+						{% endfor %}
+						{% endif %}
+					</ul>
+				</div>
+				
+				<div class="blog__posts clearfix">
+					
+				{% for loop in posts %}
+					<div class="post">
+						<div class="image watched moved">
+							{% image loop.article_image width-276 as post_img %}
+							<span class="img">
+								<img class="img" src="{{ post_img.url }}" alt="" srcset="">
+							</span>
+						</div>
+						<div class="wrap watched moved">
+							<h2 class="h3">{{loop.title}}</h2>
+							<p>
+							
+							{{loop.article_content|clean_block|safe|truncatechars:150}}
+							</p>							
+							<p class="withCats">
+								{% for cycle in loop.article_author.all %}
+								<a href="{{ loop.url }}" class="cta">Read More </a>
+								{% endfor %}
+								<a href="{{loop.get_parent.url}}">{{loop.get_parent}}</a>
+							</p>
+						</div>
+					</div>
+				{% endfor %}
+				</div>
+				<div class="pagination">
+					<div class="post-pagination">
+					<span class="step-links">
+						{% if posts.has_previous %}
+						<a href="?page=1" class="cta">&laquo; First</a>
+						<a href="?page={{ page_obj.previous_page_number }}" class="cta">Previous</a>
+						{% endif %}
+				
+						<span class="current">
+							Page {{ posts.number }} of {{ posts.paginator.num_pages }}
+						</span>
+				
+						{% if posts.has_next %}
+						<a href="?page={{ posts.next_page_number }}" class="cta">Next</a>
+						<a href="?page={{ posts.paginator.num_pages }}" class="cta">Last &raquo;</a>
+						{% endif %}
+					</span>
+					</div>
+				</div>
+			
+				<div class="mobile-pagination">
+					<div class="post-pagination">
+					<span class="step-links">
+						{% if posts.has_previous %}
+						<a href="?page=1" class="cta">&#124;&#60;</a>
+						<a href="?page={{ posts.previous_page_number }}" class="cta">&#60;</a>
+						{% endif %}
+				
+						<span class="current">
+							Page {{ posts.number }} of {{ posts.paginator.num_pages }}
+						</span>
+				
+						{% if posts.has_next %}
+						<a href="?page={{ posts.next_page_number }}" class="cta">&#62;</a>
+						<a href="?page={{ posts.paginator.num_pages }}" class="cta">&#62;&#124;</a>
+						{% endif %}
+					</span>
+					</div>
+				</div>
+			
+
+				
+			
+			
+				
+			
+
+
+
+
+
+
+				
+				
+			</section>
+
+			
+		</main>
+	
+
+			{% endblock content %}

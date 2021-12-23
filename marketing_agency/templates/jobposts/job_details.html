@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load wagtailcore_tags %}
+{% block content %}
+
+<main class="main">
+
+    <section class="welcome" id="breadcrumbs" title="">
+        <div class="wrapper">
+            <ul class="breadcrumbs animated clearfix" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <a itemprop="item" href="#" title="Strona główna" class="animated">
+                        Strona główna
+                        <meta itemprop="name" content="https://www.chemiaibiznes.com.pl/">
+                        <meta itemprop="position" content="1">
+                    </a>
+                </li>
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <a itemprop="item" href="#" title="Usługi" class="animated">
+                        Usługi
+                        <meta itemprop="name" content="Usługi">
+                        <meta itemprop="position" content="2">
+                    </a>
+                </li>
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <a itemprop="item" href="#" title="Senior Managers, Risk Management" class="animated">
+                        <strong>{{self.title}}</strong>
+                        <meta itemprop="name" content="Senior Managers, Risk Management">
+                        <meta itemprop="position" content="3">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="services-main" id="services-main">
+
+        <div class="wrapper">
+
+            <div class="wrapperShorter">
+
+                {{self.job_description}}
+
+                <p>
+                    <a href="#" class="cta">Aplikuj</a>
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+{% endblock %}

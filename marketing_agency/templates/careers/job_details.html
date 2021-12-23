@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load wagtailcore_tags %}
+{% block content %}
+
+		
+		<main class="main">
+		
+			<section class="welcome-service" id="breadcrumbs" title="">
+				<div class="wrapper jobs-wrapper">
+					<ul  class="breadcrumbs animated clearfix" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+						<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+							<a itemprop="item" href="/" title="Strona główna" class="animated">
+								Strona główna
+								<meta itemprop="name" content="https://www.chemiaibiznes.com.pl/">
+								<meta itemprop="position" content="1">
+							</a>
+						</li>
+						<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+							<a itemprop="item" href="/careers" title="Usługi" class="animated">
+								Careers
+								<meta itemprop="name" content="Usługi">
+								<meta itemprop="position" content="2">
+							</a>
+						</li>
+						<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+							<a itemprop="item" href="{{ self.url }}" title="Senior Managers, Risk Management" class="animated">
+								<strong>{{self.title|title}}</strong>
+								<meta itemprop="name" content="Senior Managers, Risk Management">
+								<meta itemprop="position" content="3">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+	
+			
+			<section class="services-main" id="services-main">
+			
+				<div class="wrapper">
+				
+					<div class="wrapperShorter">
+						<div class="jobtitle">
+<h1 class="h2 h2g">{{self.title}}</h1>
+						</div>
+						<div class="job-description">
+							{{self.job_description}}
+						</div>
+			
+						
+						<p>
+							<a href="{% url 'jobapplication' self.slug %}" class="cta">Aplikuj</a>
+						</p>
+					
+					</div>
+
+				</div>
+			</section>
+			
+		</main>	
+	{% endblock content %}

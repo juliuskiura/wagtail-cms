@@ -1,0 +1,43 @@
+
+<form action="/contact/data-form" method="post" id='' class="company-form">
+    {% csrf_token %}
+    <fieldset>            
+
+        <div class="c2">
+
+            <label for="field_name">
+                <input type="text" class="m-20" name="full_name" id="id_full_name" placeholder="{% if form.message.help_text %}{{form.full_name.help_text}}{% else %}Full Name{% endif %}
+                ">
+            </label>
+
+            <label for="field_email">
+                <input type="text" class="m-20" name="e_mail" id="id_e_mail" placeholder="{% if form.e_mail.help_text %}{{form.e_mail.help_text}}{% else %}Enter Your Email{% endif %} ">
+            </label>
+
+            <label for="field_phone">
+                <input type="text" class="m-20" name="phone_number" id="id_phone_number" placeholder="{% if form.message.help_text %}{{form.phone_number.help_text}}{% else %}+42123456789{% endif %}">
+            </label>
+
+            <label for="field_www">
+                <input type="text" class="m-20" name="business" id="id_business" placeholder="{% if form.business.help_text %}{{form.business.help_text}}{% else %} Your Business name or Website {% endif %}">
+            </label>
+
+        </div>
+
+        <label for="field_content">
+            <textarea cols="10" class="m-20" rows="6" name="message" id="id_message"
+                placeholder="{% if form.message.help_text %}{{form.message.help_text}}{% else %}Enter Your Message{% endif %}"></textarea>
+                
+        </label>
+     
+        <p class="agree">Your data are safe with us. We take your privacy seriously and we will never share your data with anyone. Read on our Privacy Policy to learn more.</p>
+        
+        <div class="submit-button">
+            <div class="systemerrors">               
+                </div>
+            <button class="cta" value="Submit" name='submit'>Submit </button>
+        </div>
+
+
+    </fieldset>
+</form>

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load wagtailcore_tags %}
+
+		<main class="main">
+
+			<section class="listing watched moved" id="kontakt" title="">
+				<div class="wrapper inner-wrapper tpl-centered">
+					<br><br>
+					<p class="hs animated watched moved">{{self.banner_intro_small}}</p>
+					<h1 class="h1 animated watched moved">{{self.banner_header}}</h1>
+					<p class="limited animated watched moved">{{self.banner_para}}</p>
+					<br><br>
+     
+					<div class="listing__steps">
+					{% for block in page.container %}
+					{% include_block block %}
+						 
+					{% endfor %}							
+					</div>
+					
+				</div>
+			</section>
+
+			<section class="contactForm watched moved" id="kontakt" title="">
+				<div class="wrapper inner-wrapper tpl-centered">
+					<br><br>
+					<h3 class="h1">{{self.contact_section_heading}}</h3>
+					<p>{{self.contact_section_para}}</p>
+					<br><br>
+					<div class="form-content">
+						<h2 class="feedback"></h2>
+						<div class="form-part">
+							{% include 'contact/ajaxed_form_page.html' %}
+						</div>
+					
+					</div>
+				</div>
+			</section>
+
+		</main>
+{% endblock content %}
+		

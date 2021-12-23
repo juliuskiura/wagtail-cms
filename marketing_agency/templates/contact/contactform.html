@@ -1,0 +1,40 @@
+<form action="" method="post" id='contactform'>
+    {% csrf_token %}
+    <fieldset>            
+
+        <div class="c2">
+
+            <label for="field_name">
+                <input type="text" name="full_name" id="field_name" placeholder="{% if form.message.help_text %}{{form.full_name.help_text}}{% else %}Full Name{% endif %}
+                ">
+            </label>
+
+            <label for="field_email">
+                <input type="email" name="e_mail" id="field_email" placeholder="{% if form.e_mail.help_text %}{{form.e_mail.help_text}}{% else %}Enter Your Email{% endif %} ">
+            </label>
+
+            <label for="field_phone">
+                <input type="text" name="phone" id="field_phone" placeholder="{% if form.message.help_text %}{{form.phone.help_text}}{% else %}Phone Number{% endif %}">
+            </label>
+
+            <label for="field_www">
+                <input type="text" name="website_url" id="field_www" placeholder="{% if form.website_url.help_text %}{{form.website_url.help_text}}{% else %} Enter Your Website{% endif %}">
+            </label>
+
+        </div>
+
+        <label for="field_content">
+            <textarea cols="10" rows="6" name="message" id="field_content"
+                placeholder="{% if form.message.help_text %}{{form.message.help_text}}{% else %}Enter Your Message{% endif %}"></textarea>
+        </label>
+        {% if self.contact_form_para %}
+        <p class="agree">{{self.contact_form_para|safe}}</p>
+        {% endif %}
+        <div class="submit-button">
+            <!-- <input class="cta" type="submit"value="Submit" class="forms"> -->
+            <button class="cta" value="Submit" name='submit'>Submit </button>
+        </div>
+
+
+    </fieldset>
+</form>

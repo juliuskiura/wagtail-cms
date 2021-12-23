@@ -1,0 +1,9 @@
+
+<form action="" method="post" class="newsletter_panel watched moved" id="newsletter_form">
+    
+    {% csrf_token %}
+    <p class="head">Newsletter</p>
+    <p>Subskrybuj, aby dostawać nasze najnowsze wpisy.</p>
+    <input type="email" name="newsletter_email" required="" id="newsletter_email" placeholder="E-mail">   
+    <button type="submit" class="cta" value="Submit" name='submit'>Subskrybuj ;)</button>
+</form>

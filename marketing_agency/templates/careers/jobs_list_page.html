@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load wagtailcore_tags %}
+{% block content %}
+
+		
+		<main class="main">
+		
+			<section class="welcome" id="breadcrumbs" title="">
+				<div class="wrapper">
+					<ul  class="breadcrumbs animated clearfix" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+						<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+							<a itemprop="item" href="/" title="Strona główna" class="animated">
+								Strona główna
+								<meta itemprop="name" content="https://www.chemiaibiznes.com.pl/">
+								<meta itemprop="position" content="1">
+							</a>
+						</li>
+						<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+							<a itemprop="item" href="/careers" title="Usługi" class="animated">
+								Careers
+								<meta itemprop="name" content="Usługi">
+								<meta itemprop="position" content="2">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			
+		
+			
+			<section class="services-main" id="services-main">
+			
+			
+				<div class="jobs-wrapper">
+					{% for category in job_categories %}
+			
+					<p class="h2 h2g">{{ category }}</p>
+						{% for each in category.get_children %}
+					<ul class="sevices-list">
+						<li><a href="{{ each.url }}">{{each.title|title}}</a></li>				
+					</ul>
+					{% endfor %}
+						
+					{% endfor %}
+					
+				</div>
+			</section>
+			
+		</main>	
+		{% endblock content %}
+		

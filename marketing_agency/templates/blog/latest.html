@@ -1,0 +1,19 @@
+{% load wagtailimages_tags %}
+{% for post in latest_posts %}
+{% load wagtailcustom_tags %}
+<div class="post">
+    <span class="img">
+        {% image post.article_image max-276x183 as post_img %}
+        <img class="img" src="{{ post_img.url }}" alt="" srcset="">
+    </span>
+    <div class="latest-title"> 
+    <h3 class="h3">{{post.title}}</h3>
+    </div>
+    <div class="latest-content"> 
+    {{ post.article_content|clean_block|safe|truncatechars:150 }}
+    </div>
+    <p>
+        <a href="{{post.url}}" class="cta"> Zobacz </a>
+    </p>
+</div>
+{% endfor %}

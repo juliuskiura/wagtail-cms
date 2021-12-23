@@ -1,0 +1,204 @@
+
+		{% extends 'base.html' %}
+		{% load static %}
+		{% load wagtailcore_tags %}
+		{% block content %}
+
+	
+		<main class="main">
+		
+			<section class="welcome-service" id="breadcrumbs" title="">
+				<div class="wrapper">
+					<ul  class="breadcrumbs animated clearfix" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+						<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+							<a itemprop="item" href="#" title="Strona główna" class="animated">
+								Strona główna
+								<meta itemprop="name" content="https://www.chemiaibiznes.com.pl/">
+								<meta itemprop="position" content="1">
+							</a>
+						</li>
+						<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+							<a itemprop="item" href="/careers" title="Usługi" class="animated">
+								Usługi
+								<meta itemprop="name" content="Usługi">
+								<meta itemprop="position" content="2">
+							</a>
+						</li>
+						<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+							<a itemprop="item" href="{{ jobpost.url }}" title="Senior Managers, Risk Management" class="animated">
+								{{jobpost.title|title }}
+								<meta itemprop="name" content="Senior Managers, Risk Management">
+								<meta itemprop="position" content="3">
+							</a>
+						</li>
+						<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+							<a itemprop="item" href="#" title="Aplikacja" class="animated">
+								<strong>Aplikacja</strong>
+								<meta itemprop="name" content="Aplikacja">
+								<meta itemprop="position" content="3">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			
+			<style>
+		
+			
+			
+			
+			
+			</style>
+			
+			<section class="services-main" id="services-main">
+			
+				<div class="wrapper jobs-wrapper">
+				
+					<h1 class="h2 h2g">{{ jobpost.title }}</h1>
+			
+					<p class="feedback"></p>
+					<div class="form-part">
+				
+						<form action="" method="POST" enctype="multipart/form-data" class="services-form">
+							{% csrf_token %}
+						
+					
+						<div class="block">
+						
+							<legend>Dane personalne:</legend>
+							
+							<div class="fields">
+							
+								<label for="personal_name">
+									<span>Pełne imię i nazwisko <span class="redd">*</span></span>
+									<input type="text" name="full_name" id="id_full_name" placeholder="Adam Paweł Kowalski" class="m270">
+								</label>
+								
+								<label for="personal_email">
+									<span>Adres email <span class="redd">*</span></span>
+									<input type="text" name="email" id="id_email" placeholder="adamkowalski@kowalski.com" class="m270">
+									
+								</label>
+								
+								<label for="personal_phone">
+									<span>Numer telefonu <span class="redd">*</span></span>
+									<input type="text" name="phone_number" id="id_phone_number" placeholder="+48123456789" class="m270">
+								</label>
+							
+							</div>
+						
+						</div>
+						
+						<div class="block">
+						
+							<legend>CV / Resume <span class="redd">*</span>
+								<span class="cleared mobileOnly">Akceptujemy pliki  PDF, DOC, DOCX, JPG i PNG</span>
+								
+							</legend>
+							
+							
+							<div class="fields">
+								<div class="mb-3">
+									
+									<input class="m270 document" name="document" id="id_document" type="file">
+									<br>
+									
+									
+								</div>
+							<label for="formFile" class="form-label">Akceptujemy pliki PDF, DOC, DOCX, JPG i PNG</label>
+							
+							
+							</div>
+						
+						</div>
+						
+						<div class="block">
+						
+							<legend>Kilka słów o sobie:</legend>
+							
+							<div class="fields">
+							
+								<label for="personal_desc">
+									<textarea name="about_yourself" id="id_about_yourself" rows="5" placeholder="Opowiedz nam o sobie ..."></textarea>
+								</label>
+							
+							</div>
+						
+						</div>
+						
+						<div class="block">
+						
+							<legend>Pytania:<span class="cleared">Prosimy o wypełnienie dodatkowych pytań</span></legend>
+							
+							<div class="fields">
+							
+								<label for="personal_when">
+									<span>Kiedy możesz zacząć? <span class="redd">*</span></span>
+									<input type="text" name="when_can_you_start" id="id_when_can_you_start" placeholder="when can you start">
+								</label>							
+								
+								<label for="personal_salary">
+									<span>Jakie są Twoje miesięczne oczekiwania płacow?</span>
+									<input type="text" name="monthly_salary_expectations" id="id_monthly_salary_expectations">
+								</label>
+								
+								<label for="personal_type">
+									<span>Jaki jest Twój preferowany rodzaj umowy?</span>
+									<input type="text" name="preferred_contract" id="id_preferred_contract">
+								
+								</label>
+							
+							</div>
+							
+						</div>
+						
+						<div class="block">
+						
+							<legend></legend>
+							
+							<div class="fields withCheckbox">
+							
+								<div class="input">
+									<span class="redd reddFR">*</span><input type="checkbox" name="consent" id="id_consent">									
+								<div class="side">
+							
+									<p>Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w formularzu zgłoszeniowym, CV i/lub innych dokumentach, przez (...) Sp. z o.o. z siedzibą w (...) przy (...) , jako administratora danych, dla celów prowadzenia rekrutacji. </p>
+									
+									<p class="mobileOnly"><strong class="toggle" rel="moreAgree">Czytaj więcej ></strong></p>
+									<input type="hidden" id="" name="jobtitle" value="{{ jobpost.slug }}">
+									<div class="slidered dead" id="moreAgree">
+
+										<p>Zgoda może zostać wycofana w dowolnym momencie, co nie będzie miało wypływu na legalność przetwarzania danych przed jej cofnięciem.</p>
+
+										<p>Consent for data processing can be withdrawn at any time, which will not affect the lawfulness of processing based on consent before its withdrawal.</p>
+
+										<p>Wiecej informacji znajdziesz <a href="#"><strong>tutaj.</strong></a></p>
+										
+										<div class="systemerrors validate"> 
+										</div>
+
+									
+									</div>
+												<button name="submit" class="cta" style="color: #fff; position:relative; z-index: 300;">Submit</button>
+								
+									
+						
+								</div>
+								
+
+							</div>
+							
+						</div>
+						
+					</form>
+
+
+				</div>
+				</div>
+				
+			</section>
+			
+		</main>	
+		
+		
+{% endblock content %}		

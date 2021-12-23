@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+{% block content %}
+		
+		<main class="main">
+		
+			<section class="blog wrapper">
+		
+				<div class="watched moved clearfix">
+					<ul class="blog__categories margin_blog_details">
+						<li class="righter"><a href=""><i class="icon-search"></i></a></li>
+						
+						
+						<li><a href="/articles">All Articles</a></li>
+						<li><a href="{{self.get_parent.url}}" class="active">{{ self.get_parent }}</a></li>
+					</ul>
+				</div>
+		
+				<div class="blog__content">
+					<p class="date watched moved">{{ self.first_published_at|date:"M. j, Y" }}</p>
+					
+					<h1 class="h1 watched moved">{{self.title|title}}</h1>
+					
+					<div>
+						{{self.article_content|safe}}
+					</div>
+					
+				</div>
+	
+				<div class="blog__author">
+				
+					<div class="scaffold">
+						{% for loop in self.article_author.all %}
+				
+						<div class="blog__person watched moved">
+							<div class="image">
+								{% image loop.author.photo max-106x106 as img %}
+								<img data-src="{{img.url}}" class="lazyLoad avatar">
+							</div>
+							<div class="cont">
+								<p class="strong">{{loop.author}}</p>
+								{{loop.author.author_bio}}
+							</div>
+						</div>
+						{% endfor %}
+					
+					</div>
+					<div class="subscription-part" id="subscription-part">
+						
+						<div class="form-content">
+							{% include 'subscriptions/subscription_page.html' %}
+						</div>
+					</div>
+				
+				</div>
+
+				<div class="blog__seealso">
+				
+					<p class="h3">Zobacz także</p>
+					
+					<div class="wrapps">
+				
+						{% include 'blog/latest.html' %}
+						
+			
+					</div>
+					
+				</div>
+				
+			</section>
+			
+		</main>
+	
+	{% endblock content %}
