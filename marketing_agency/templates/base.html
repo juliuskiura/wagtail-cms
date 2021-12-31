@@ -427,7 +427,7 @@
 
 
     <header class="header header-white">
-        <div class="wrapper">
+     
         <div class="container">
             <div class="row v-center">
                 <div class="item-left">
@@ -468,8 +468,7 @@
                 <div class="header-item item-center">
     
                     <nav class="menu header-links-removed">
-                        <ul class="main-nav">
-                            <li class="nav-item menu-item mt-15"><a href="#">Home</a></li>
+                        <ul class="main-nav">                          
                             {% for item in main_menu.menu_items.all %}
                             {% if item.title == 'Services' %}
                             <li class="nav-item menu-item mt-15 menu-item-has-children">
@@ -479,67 +478,20 @@
                                 </span>
                                 <div class="sub-menu mega-menu">
                                     {% for item in services_sub_menu.menu_items.all %}
-                                    <ul class="mega-items  mt-15"> <span class="mega-heading">{{ item.title }}<i class="icon-right-open"></i></span>
-                                        <div class="mega-menu-list-items">
-
-                                            
+                                    <ul class="mega-items  mt-15"> <span class="mega-heading"><a href="{{ item.link }}">{{ item.title }}</a><i class="icon-right-open"></i></span>
+                                        <div class="mega-menu-list-items">                                            
                                             {% for child in item.menuchildren.all %}
-                                            <li class="menu-item"><a href=""></a>{{ child.link_title }}</li>
+                                            <li class="menu-item"><a href="{{ child.link_url }}"></a>{{ child.link_title }}</li>
                                             {% endfor %}
                                         </div>    
     
                                     </ul>
-                                    {% endfor %}
-
-                                    <!--  
-                                    <ul class="mega-items mt-15">
-                                        <span class="mega-heading">Header2 <i class="icon-right-open"></i></span>
-
-                                        <div class="mega-menu-list-items">
-                                        
-                                            <li class="menu-item"><a href=""></a>Service 1</li>
-                                            <li class="menu-item"><a href=""></a>Service 2</li>
-                                            <li class="menu-item"><a href=""></a>Service 3</li>
-                                            <li class="menu-item"><a href=""></a>Service 4</li>
-                                        </div>    
-                                    </ul>
-                                    <ul class="mega-items mt-15">
-                                        <span class="mega-heading">Header3 <i class="icon-right-open"></i></span>
-                                        <div class="mega-menu-list-items">
-                                        
-                                            <li class="menu-item"><a href=""></a>Service 1</li>
-                                            <li class="menu-item"><a href=""></a>Service 2</li>
-                                            <li class="menu-item"><a href=""></a>Service 3</li>
-                                            <li class="menu-item"><a href=""></a>Service 4</li>
-                                        </div>
-                                    </ul>
-                                    <ul class="mega-items mt-15">
-                                        <span class="mega-heading">Header4 <i class="icon-right-open"></i></span>
-                                        <div class="mega-menu-list-items">
-                                        
-                                            <li class="menu-item"><a href=""></a>Service 1</li>
-                                            <li class="menu-item"><a href=""></a>Service 2 Service 2</li>
-                                            <li class="menu-item"><a href=""></a>Service 3</li>
-                                            <li class="menu-item"><a href=""></a>Service 4</li>
-                                        </div>
-                                    </ul>
-                                    <ul class="mega-items mt-15">
-                                        <span class="mega-heading">Header5 <i class="icon-right-open"></i></span>
-                                        <div class="mega-menu-list-items">
-                                        
-                                            <li class="menu-item"><a href=""></a>Service 1</li>
-                                            <li class="menu-item"><a href=""></a>Service 2</li>
-                                            <li class="menu-item"><a href=""></a>Service 3</li>
-                                            <li class="menu-item"><a href=""></a>Service 4</li>
-                                        </div>
-                                    </ul>
-                                      -->
-
+                                    {% endfor %}                                  
 
                                 </div>
                             </li>
                             {% else %}                           
-                            <li class="nav-item menu-item mt-15"><a href="#">{{ item.title }}</a></li>
+                            <li class="nav-item menu-item mt-15"><a href="{{ item.link }}">{{ item.title }}</a></li>
                             {% endif %}                            
                             {% endfor %}
                         </ul>
@@ -556,12 +508,10 @@
                 </div>
             </div>
         </div>
-        </div>
+        
     
     
     </header>
-
-        <span class="header-filler"></span>
     
         <div id="goToTop"><span></span></div>
     

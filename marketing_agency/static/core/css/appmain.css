@@ -524,7 +524,7 @@ textarea {
     display: block;
     width: 100%;
     z-index: 99;
-    position: relative;
+    position: relative
      
 }
 .header .container{
@@ -532,7 +532,7 @@ textarea {
     margin: auto;
 }
 .container{
-    max-width: 1200px;
+    max-width: 100vw;
 }
 .header .item-left{
     display: flex;
@@ -669,6 +669,23 @@ ul.languages li a{
  .header-links-removed{
    display: block; 
 }
+.header, .header ul li a {
+    font-weight: normal;   
+}
+.header, .header ul li a {
+    font-weight: normal;   
+}
+.header .item-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+    text-align: left;
+
+}
+.header .item-left .logo{
+    margin-left: 3rem;
+    
+}
 .mega-menu-list-items{
     display: block !important;
 }
@@ -687,7 +704,7 @@ ul.languages li a{
    .row {
      display: flex;  
      flex-wrap: wrap;
-     padding: 20px 0px;
+
    } 
    .v-center{
        align-items: center;
@@ -744,9 +761,17 @@ border-radius: 15px;
    
 }
 span.mega-heading{
-   font-size: 16px;
+    font-weight: 700 !important;
+   font-size: 20px;
+   transition: color 0.3s ease; 
+
+}
+
+span.mega-heading a{
+    font-weight: 700 !important;
+   font-size: 18px;
    transition: color 0.3s ease;
-   font-weight: 700;
+  
 
 }
 .header .menu .mega-menu{
