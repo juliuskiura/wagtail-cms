@@ -251,43 +251,43 @@ const __time = parseInt(Date.now());
 			  }
 			}, { capture: false, passive: true });
 			
-			var i, toggles = document.getElementsByClassName('toggle');
-			for (i = 0; i < toggles.length; i++) {
-				var obj = toggles[i];
-				setTimeout(function(element) {
-					element.onclick = function(ev) {
+			// var i, toggles = document.getElementsByClassName('toggle');
+			// for (i = 0; i < toggles.length; i++) {
+			// 	var obj = toggles[i];
+			// 	setTimeout(function(element) {
+			// 		element.onclick = function(ev) {
 					
-						ev.stopPropagation();
-						ev.cancelBubble = true;
+			// 			ev.stopPropagation();
+			// 			ev.cancelBubble = true;
 						
-						var id = element.attributes.rel.value;
-						var objX = document.getElementById(id);
-						var height = absolutePosition(objX).height;
+			// 			var id = element.attributes.rel.value;
+			// 			var objX = document.getElementById(id);
+			// 			var height = absolutePosition(objX).height;
 						
-						if(height > 0) {
-							console.log('Zwijam');
-							objX.style.maxHeight = '0px';
-							objX.dataset.height = height;
-							element.classList.remove('toggled');
-						} else {
-							console.log('Rozwijam');
-							objX.style.maxHeight = objX.dataset.height + 'px';
-							element.classList.add('toggled');
-						};
+			// 			if(height > 0) {
+			// 				console.log('Zwijam');
+			// 				objX.style.maxHeight = '0px';
+			// 				objX.dataset.height = height;
+			// 				element.classList.remove('toggled');
+			// 			} else {
+			// 				console.log('Rozwijam');
+			// 				objX.style.maxHeight = objX.dataset.height + 'px';
+			// 				element.classList.add('toggled');
+			// 			};
 						
-						objX.classList.toggle('dead');
+			// 			objX.classList.toggle('dead');
 						
-						setTimeout(function(){
-							getInitialPositions();
-						}, 1300);
+			// 			setTimeout(function(){
+			// 				getInitialPositions();
+			// 			}, 1300);
 						
-						setTimeout(function(){
-							onScroll(window.scrollY);
-						}, 1400);
+			// 			setTimeout(function(){
+			// 				onScroll(window.scrollY);
+			// 			}, 1400);
 						
-					};
-				}, 1, toggles[i]);
-			};			
+			// 		};
+			// 	}, 1, toggles[i]);
+			// };			
 
 			let mobileMenuStatus = false;
 			const menuMenu = document.getElementById('menu-menu');
@@ -308,15 +308,58 @@ const __time = parseInt(Date.now());
 
 // START CONTACT FORM
 
-window.addEventListener('load', (event) => {
-    var contactFormDOM = document.getElementById("contactFormDOM");
-    document.getElementById("contactFormSubmitButton").addEventListener("click", function(){
-        contactFormDOM.classList.add("submitted");
-    });
-    contactFormDOM.onsubmit = function(event) {
-        contactFormDOM.innerHTML = '<p class="h1">Dziękujemy za kontakt. W najbliższym czasie skontaktuje się z Tobą jeden z naszych ekspertów.</p>';
-        event.preventDefault();
-    };
-});
+// window.addEventListener('load', (event) => {
+//     var contactFormDOM = document.getElementById("contactFormDOM");
+//     document.getElementById("contactFormSubmitButton").addEventListener("click", function(){
+//         contactFormDOM.classList.add("submitted");
+//     });
+//     contactFormDOM.onsubmit = function(event) {
+//         contactFormDOM.innerHTML = '<p class="h1">Dziękujemy za kontakt. W najbliższym czasie skontaktuje się z Tobą jeden z naszych ekspertów.</p>';
+//         event.preventDefault();
+//     };
+// });
 		
 // END CONTACT FORM
+
+
+
+
+const icon_toggler = document.querySelector('.menu-toggle')
+const close_icon = document.querySelector('.icon-cancel-1')
+const menu_icon = document.querySelector('.icon-menu')
+const header_links  = document.querySelector('.menu')
+const languages  = document.querySelector('.item-right')
+
+icon_toggler.addEventListener('click', (e)=>{
+    if(close_icon.classList.contains('icon-removed')){
+        close_icon.classList.toggle('icon-removed');
+        menu_icon.classList.toggle('icon-removed');
+        header_links.classList.toggle('header-links-removed');
+        languages.classList.toggle('lang-removed');
+}else{
+    close_icon.classList.toggle('icon-removed');
+    menu_icon.classList.toggle('icon-removed');
+    header_links.classList.toggle('header-links-removed');
+    languages.classList.toggle('lang-removed');
+}
+    
+
+})
+
+
+
+
+
+$(function() {                      
+  $(".toggler-icon").click(function() {  
+    $(this).find('.service-icon').toggleClass("rotated");
+    $(this).next('.mega-menu').toggleClass("collapsed");		
+  });
+});
+
+$(function() {                      
+  $(".mega-heading").click(function() { 
+    $(this).find('i').toggleClass("rotated");
+	$(this).next().toggleClass("collapsed");   	
+  });
+});
