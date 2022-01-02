@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'careers',
     'menus',
     'jobapplications',
+    'policies',
 
 
     'phonenumber_field',

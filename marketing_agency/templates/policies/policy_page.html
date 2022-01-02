@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+{% block content %}
+
+<main class="main">
+
+	<section class="blog wrapper">
+		<div class="wrapper inner-wrapper tpl-centered">
+		<br><br>
+		<p class="hs animated watched moved">{{self.banner_intro_small}}</p>
+		<h1 class="h1 animated watched moved">{{self.banner_header}}</h1>
+	</div>
+		<br><br>
+
+		<div class="blog__content policy">
+			
+
+			
+			{% for block in page.container %}
+			{% include_block block %}
+			
+			{% endfor %}
+
+		</div>
+
+	
+
+		
+
+	</section>
+
+</main>
+
+{% endblock content %}

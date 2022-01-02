@@ -48,7 +48,7 @@
     
     <body itemscope="" itemtype="http://schema.org/WebPage" class="offline {% if add_careers_css %} white {% endif %}">
     
-        <header class="header header-white">
+        <!-- <header class="header header-white">
             <div class="wrapper">
                             {% if not add_careers_css %}
                 <a href="/" title="Agencja Marketingowa Warszawa" class="logotype"><svg class="logotype-image"
@@ -97,14 +97,29 @@
                                         class="icon-down-open"></i></label>
                             </a>
                             <input type="checkbox" id="sm1" class="index">
-                            <ul class="submenu" role="menubar" aria-activedescendant="">
-                                {% for item in services_sub_menu.menu_items.all %}
+                            <ul class="submenu mega-menu" role="menubar" aria-activedescendant="">    
+                               
                                 <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
                                     <a href="{{ item.link }}" role="menuitem" tabindex="-1" itemprop="url" title="">
-                                        <span itemprop="name">{{ item.title }}</span>
+                                        <span itemprop="name">Item One</span>
                                     </a>
                                 </li>
-                                {% endfor %}
+                                <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                    <a href="{{ item.link }}" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                        <span itemprop="name">Item One</span>
+                                    </a>
+                                </li>
+                                <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                    <a href="{{ item.link }}" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                        <span itemprop="name">Item One</span>
+                                    </a>
+                                </li>
+                                <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                    <a href="{{ item.link }}" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                        <span itemprop="name">Item One</span>
+                                    </a>
+                                </li> 
+                              
                             </ul>
                         </li>                            
                             {% else %}
@@ -152,9 +167,351 @@
                     <span class="after"></span>
                 </nav>
             </div>
+        </header> -->
+
+<!--  
+        
+        <header class="header header-white">
+            <div class="wrapper">
+        
+                <a href="/" title="Agencja Marketingowa Warszawa" class="logotype"><svg class="logotype-image" id="Warstwa_1"
+                        data-name="Warstwa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1001 700"
+                        alt="Agencja Marketingowa Warszawa">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #fff;
+                                }
+                            </style>
+                        </defs>
+                        <polygon class="cls-1" points="89.74 413.72 89.74 576.53 435.87 267.86 435.87 101.23 89.74 413.72" />
+                        <polygon class="cls-1" points="565.44 413.6 565.44 576.41 911.56 267.74 911.56 101.11 565.44 413.6" />
+                        <polygon class="cls-1" points="327.01 414.29 327.01 577.1 673.14 268.43 673.14 101.8 327.01 414.29" />
+                    </svg></a>
+        
+        
+        
+        
+        
+        
+                <nav role="navigation" class="navigation" id="menu-menu">
+                    <span class="mobileMenu" id="mobileMenu">
+                        <span class="navigation-close animated"><i class="icon-cancel-1"></i></span>
+                        <span class="navigation-open animated"><i class="icon-menu"></i></span>
+                    </span>
+                    <span class="before"></span>
+                    <ul class="clearfix" role="menubar" aria-activedescendant="">
+        
+        
+        
+                        <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                            <a data-id="1" data-parent="0" role="menuitem" tabindex="-1" itemprop="url" title="">
+        
+                                <span class="drop-icon"><i class="icon-down-open"></i></span>
+                                <label title="Toggle Drop-down" class="drop-icon" for="sm1"><span
+                                        itemprop="name">Services</span> <i class="icon-down-open"></i></label>
+                            </a>
+                            <input type="checkbox" id="sm1" class="index">
+                            <ul class="submenu mega-menu role="menubar" aria-activedescendant="">
+        
+                                <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                    <a href="/services/analytics/" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                        <h3 itemprop="name">Column 1</h3>
+                                    </a>
+                                  
+                                    <ul class="submenu mega-menu-items" role="menubar" aria-activedescendant="">
+                                    
+                                        <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                            <a href="/services/analytics/" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                                <span itemprop="name">Analytics</span>
+                                            </a>
+                                        </li>
+                                    
+                                        <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                            <a href="/services/marketing-automation/" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                                <span itemprop="name">Marketing Automation</span>
+                                            </a>
+                                        </li>
+                                    
+                                    </ul>
+                                    
+                                </li>
+        
+                                <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                    <a href="/services/marketing-automation/" role="menuitem" tabindex="-1" itemprop="url"
+                                        title="">
+                                        <span itemprop="name">Column 2</span>
+                                    </a>
+
+                                    <ul class="submenu mega-menu-items" role="menubar" aria-activedescendant="">
+                                    
+                                        <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                            <a href="/services/analytics/" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                                <span itemprop="name">Analytics</span>
+                                            </a>
+                                        </li>
+                                    
+                                        <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                            <a href="/services/marketing-automation/" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                                <span itemprop="name">Marketing Automation</span>
+                                            </a>
+                                        </li>
+                                    
+                                    </ul>
+                                </li>
+        
+                                <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                    <a href="/services/marketing-automation/" role="menuitem" tabindex="-1" itemprop="url"
+                                        title="">
+                                        <span itemprop="name">Column 2</span>
+                                    </a>
+
+                                    <ul class="submenu mega-menu-items" role="menubar" aria-activedescendant="">
+                                    
+                                        <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                            <a href="/services/analytics/" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                                <span itemprop="name">Analytics</span>
+                                            </a>
+                                        </li>
+                                    
+                                        <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                            <a href="/services/marketing-automation/" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                                <span itemprop="name">Marketing Automation</span>
+                                            </a>
+                                        </li>
+                                    
+                                    </ul>
+                                </li>
+        
+                                <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                    <a href="/services/marketing-automation/" role="menuitem" tabindex="-1" itemprop="url"
+                                        title="">
+                                        <span itemprop="name">Column 2</span>
+                                    </a>
+
+                                    <ul class="submenu mega-menu-items" role="menubar" aria-activedescendant="">
+                                    
+                                        <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                            <a href="/services/analytics/" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                                <span itemprop="name">Analytics</span>
+                                            </a>
+                                        </li>
+                                    
+                                        <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                            <a href="/services/marketing-automation/" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                                <span itemprop="name">Marketing Automation</span>
+                                            </a>
+                                        </li>
+                                    
+                                    </ul>
+                                </li>
+        
+                                <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                    <a href="/services/marketing-automation/" role="menuitem" tabindex="-1" itemprop="url"
+                                        title="">
+                                        <span itemprop="name">Column 2</span>
+                                    </a>
+
+                                    <ul class="submenu mega-menu-items" role="menubar" aria-activedescendant="">
+                                    
+                                        <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                            <a href="/services/analytics/" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                                <span itemprop="name">Analytics</span>
+                                            </a>
+                                        </li>
+                                    
+                                        <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                            <a href="/services/marketing-automation/" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                                <span itemprop="name">Marketing Automation</span>
+                                            </a>
+                                        </li>
+                                    
+                                    </ul>
+                                </li>
+        
+                            </ul>
+                        </li>
+                        
+        
+        
+        
+        
+        
+                        <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                            <a data-id="1" data-parent="0" role="menuitem" tabindex="-1" itemprop="url" title="">
+                        
+                                <span class="drop-icon"><i class="icon-down-open"></i></span>
+                                <label title="Toggle Drop-down" class="drop-icon" for="sm1"><span itemprop="name">Services</span> <i
+                                        class="icon-down-open"></i></label>
+                            </a>
+                            <input type="checkbox" id="sm1" class="index">
+                            <ul class="submenu menu-items" role="menubar" aria-activedescendant="">
+                        
+                                <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                    <a href="/services/analytics/" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                        <span itemprop="name">Analytics</span>
+                                    </a>
+                                </li>
+                        
+                                <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                    <a href="/services/marketing-automation/" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                        <span itemprop="name">Marketing Automation</span>
+                                    </a>
+                                </li>
+                        
+                            </ul>
+                        </li>
+        
+        
+        
+        
+        
+        
+                        <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        
+                            <a href="#" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                <span itemprop="name">Knowledge</span>
+                            </a>
+                        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+                        <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement"
+                            class="mobileOnly">
+                            <a href="/careers" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                <span itemprop="name">Careers</span>
+                            </a>
+                        </li>
+        
+        
+                        <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement"
+                            class="mobileOnly">
+                            <a href="/contact/" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                <span itemprop="name">Contact</span>
+                            </a>
+                        </li>
+        
+        
+                        <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement" class="language">
+                            <a href="#" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                <strong itemprop="name">PL</strong>
+                            </a>
+                        </li>
+                        <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement" class="language">
+                            <a href="/" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                <span itemprop="name">EN</span>
+                            </a>
+                        </li>
+                        <li role="presentation" itemscope itemtype="https://schema.org/SiteNavigationElement" class="language">
+                            <a href="/" role="menuitem" tabindex="-1" itemprop="url" title="">
+                                <span itemprop="name">RU</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="after"></span>
+                </nav>
+            </div>
         </header>
     
-        <span class="header-filler"></span>
+
+    -->
+
+
+
+    <!-- new one -->
+
+
+    <header class="header header-white">
+     
+        <div class="container">
+            <div class="row v-center">
+                <div class="item-left">
+                    <div class="logo">
+                        {% if not add_careers_css %}
+                        <a href="/" title="Agencja Marketingowa Warszawa" class="logotype"><svg class="logotype-image" id="Warstwa_1"
+                                data-name="Warstwa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1001 700"
+                                alt="Agencja Marketingowa Warszawa">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #fff;
+                                        }
+                                    </style>
+                                </defs>
+                                <polygon class="cls-1" points="89.74 413.72 89.74 576.53 435.87 267.86 435.87 101.23 89.74 413.72" />
+                                <polygon class="cls-1" points="565.44 413.6 565.44 576.41 911.56 267.74 911.56 101.11 565.44 413.6" />
+                                <polygon class="cls-1" points="327.01 414.29 327.01 577.1 673.14 268.43 673.14 101.8 327.01 414.29" />
+                            </svg></a>
+                        {%else %}
+                        <a href="/" title="Agencja Marketingowa Warszawa" class="logotype"><img
+                                class="lazyLoad logotype-image alreadyVisible preloaded visible" data-src="assets/logotype-main-color.svg"
+                                alt="" data-top="2040" data-bottom="2120" data-class="lazyLoad logotype-image alreadyVisible preloaded visible"
+                                data-already-visible="1" data-preloaded="1" src="{% static 'core/images/logotype-main-color.svg' %}"></a>
+                        {% endif %}
+                     
+                    </div>
+                    <div class="menu-toggle">
+                        <i class="icon-menu"></i>
+                        <i class="icon-cancel-1 icon-removed"></i>
+                    </div>
+    
+    
+    
+    
+                </div>
+    
+                <div class="header-item item-center">
+    
+                    <nav class="menu header-links-removed">
+                        <ul class="main-nav">                          
+                            {% for item in main_menu.menu_items.all %}
+                            {% if item.title == 'Services' %}
+                            <li class="nav-item menu-item mt-15 menu-item-has-children">
+                                <span class="toggler-icon">{{ item.title }}
+                                    <i class="icon-right-open service-icon"></i>                                    
+                                    <i class="icon-down-open"></i>                                    
+                                </span>
+                                <div class="sub-menu mega-menu">
+                                    {% for item in services_sub_menu.menu_items.all %}
+                                    <ul class="mega-items  mt-15"> <span class="mega-heading"><a href="{{ item.link }}">{{ item.title }}</a><i class="icon-right-open"></i></span>
+                                        <div class="mega-menu-list-items">                                            
+                                            {% for child in item.menuchildren.all %}
+                                            <li class="menu-item"><a href="{{ child.link_url }}"></a>{{ child.link_title }}</li>
+                                            {% endfor %}
+                                        </div>    
+    
+                                    </ul>
+                                    {% endfor %}                                  
+
+                                </div>
+                            </li>
+                            {% else %}                           
+                            <li class="nav-item menu-item mt-15"><a href="{{ item.link }}">{{ item.title }}</a></li>
+                            {% endif %}                            
+                            {% endfor %}
+                        </ul>
+    
+                    </nav>
+                </div>
+    
+                <div class="item-right lang-removed">
+                    <ul class="languages mt-15">
+                        <li class="mr-20"><a href="">PL</a></li>
+                        <li class="mr-20"><a href="">NL</a></li>
+                        <li class="mr-20"><a href="">RU</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    
+    
+    </header>
     
         <div id="goToTop"><span></span></div>
     
